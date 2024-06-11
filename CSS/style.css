@@ -1,5 +1,6 @@
-.home{
-    background-image: url('/e-commerce-images/Desktop\ -\ 1.png');
+
+*{
+    background-image: url('https://demilee06.github.io/E-com-images/Desktop%20-%201.png');
 }
 
 h1{
@@ -31,3 +32,11 @@ img{
 
 /*About page*/
 
+.headingOne{
+    font-family: "Luckiest Guy";
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700; line-height: 26.4px;
+    text-align: center;
+}
