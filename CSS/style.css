@@ -39,6 +39,10 @@ img{
     font-variant: normal;
     font-weight: 700; line-height: 26.4px;
     text-align: center;
+
+    margin-top: 2% ;
+}
+
 }
 
 /*Product page*/
@@ -223,3 +227,4 @@ footer {
     bottom: 0px;
     width: 100vw;
   }
+
