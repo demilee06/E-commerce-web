@@ -57,7 +57,7 @@ items.forEach(item => {
                 </div> 
             </div>
     `
-    console.log(item.id);
+    // console.log(item.id);
 })
 
 const addToCartBtn = document.querySelectorAll('.add-btn')
