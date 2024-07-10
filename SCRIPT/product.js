@@ -35,6 +35,7 @@ let item20 = new Rug(20,'Patterned Phone Cover','https://demilee06.github.io/E-c
 
 let items = [item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20]
 
+let purchaseItems = []
 
 items.forEach(item => {
     main.innerHTML += `
@@ -50,12 +51,28 @@ items.forEach(item => {
                         <span class="float-end"><a href="#" class="small text-muted">${item.category}</a></span>
                     </div>
                     <h5 class="card-title">${item.description}</h5>
-                    <div class="d-grid gap-2 my-4"> <a href="../HTML/Checkout.html" class="btn btn-warning">Add to Cart</a>
+                    <div class="d-grid gap-2 my-4"> <button type="button" class="btn add-btn btn-warning" value=${item.id}>Add to Cart</button>
                     </div>
                     </div>
-                </div>
+                </div> 
             </div>
     `
+    // console.log(item.id);
 })
 
+const addToCartBtn = document.querySelectorAll('.add-btn')
 
+addToCartBtn.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+        viewItems(event.target.value)
+        // window.location.href = 'Checkout.html'
+    })
+})
+
+function viewItems(id) {
+    let [item] = items.filter(object => object.id === +id)
+    if (item) {
+        purchaseItems.push(item) 
+        localStorage.setItem('purchaseItems', JSON.stringify(purchaseItems))
+    }
+}
